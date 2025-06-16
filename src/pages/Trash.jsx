@@ -12,17 +12,17 @@ export default function Trash() {
 
   const handlePermanentDelete = (id) => {
     const confirmed = window.confirm(
-      "🗑️ Are you sure you want to permanently delete this note? This action cannot be undone."
+      " Are you sure you want to permanently delete this note? This action cannot be undone."
     );
     if (confirmed) {
-      deleteNote(id, true); // pass 'true' for permanent deletion
+      deleteNote(id, true); 
     }
   };
 
   return (
     <div className="space-y-6">
       <p className="text-center text-red-600 italic">
-        🕒 Notes in trash are auto-deleted after 7 days.
+         Notes in trash are auto-deleted after 7 days.
       </p>
 
       {trashedNotes.length === 0 ? (
